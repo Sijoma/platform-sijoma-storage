@@ -33,11 +33,11 @@ spec:
               spec:
                 forProvider:
                   forceDestroy: true
-                  region: eu-west-1
+                  region: eu-west-1 # <- from env
                   tags:
                     FOO: BAR
                 providerConfigRef:
-                  name: storage
+                  name: storage # <- from env
             patches:
               - type: FromCompositeFieldPath
                 fromFieldPath: spec.region

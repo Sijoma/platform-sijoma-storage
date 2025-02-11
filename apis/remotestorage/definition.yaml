@@ -8,7 +8,7 @@ spec:
     kind: XRemoteStorage
     plural: xremotestorages
   claimNames:
-    kind: EncryptionKey
+    kind: RemoteStorage
     plural: remotestorages
   versions:
   - name: v1alpha1
@@ -23,11 +23,8 @@ spec:
             properties:
               id:
                 type: string
-              region:
-                type: string
             required:
               - id
-              - region
           status:
             type: object
             properties:
