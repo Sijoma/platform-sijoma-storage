@@ -1,0 +1,35 @@
+apiVersion: apiextensions.crossplane.io/v1
+kind: CompositeResourceDefinition
+metadata:
+  name: xremotestorages.xplane.sijoma.io
+spec:
+  group: xplane.sijoma.io
+  names:
+    kind: XRemoteStorage
+    plural: xremotestorages
+  claimNames:
+    kind: EncryptionKey
+    plural: remotestorages
+  versions:
+  - name: v1alpha1
+    served: true
+    referenceable: true
+    schema:
+      openAPIV3Schema:
+        type: object
+        properties:
+          spec:
+            type: object
+            properties:
+              id:
+                type: string
+              region:
+                type: string
+            required:
+              - id
+              - region
+          status:
+            type: object
+            properties:
+              anything:
+                type: string

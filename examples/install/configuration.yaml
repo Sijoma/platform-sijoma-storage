@@ -1,0 +1,7 @@
+apiVersion: pkg.crossplane.io/v1
+kind: Configuration
+metadata:
+  name: platform-sijoma-encryption
+spec:
+  skipDependencyResolution: false
+  package: ghcr.io/sijoma/platform-sijoma-encryption:v0.0.1
